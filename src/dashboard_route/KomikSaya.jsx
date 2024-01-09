@@ -40,7 +40,7 @@ const KomikSaya = () => {
             <div className='w-full h-56 overflow-hidden rounded-md shadow-lg'>
               <img src={anime.thumbnail} alt={anime.title} className='object-cover w-full h-full group-hover:scale-110 transition-transform duration-500' />
             </div>
-            <h1 className='font-bold'>{anime.title}</h1>
+            <h1 className='font-bold dark:text-slate-300'>{anime.title}</h1>
             <button
               className='text-white bg-red-600 p-2 rounded-md'
               style={{ backgroundColor: localStorage.getItem('Tema') }}

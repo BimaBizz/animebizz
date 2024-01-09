@@ -41,7 +41,9 @@ const DetailKomik = () => {
         <>
           <div>
             {loading ? (
-            <p>Loading...</p>
+            <div className='w-full h-full flex justify-center items-center'>
+            <div className='loader'></div>
+          </div>
             ):(
                 <div className='m-4 space-y-3'>
                     <h1 className='text-xl md:text-2xl font-bold text-red-600' style={{color: localStorage.getItem('Tema')}}>{dataKomik.title}</h1>
@@ -50,7 +52,7 @@ const DetailKomik = () => {
                             <img src={dataKomik.thumbnail} alt={dataKomik.param} className='object-cover hover:scale-110 transition-transform duration-500'/>
                         </div>
                         <div className='space-y-3 md: col-span-2'>
-                            <p className='text-justify'>{dataKomik.synopsis}</p>
+                            <p className='text-justify dark:text-slate-300'>{dataKomik.synopsis}</p>
                             <div className='flex flex-wrap gap-1'>
                                 {dataKomik.genre.map((item, index) => (
                                 <div key={index} className='p-2 bg-red-600 hover:bg-fourt/50 rounded-md transition-colors duration-500' style={{backgroundColor: localStorage.getItem('Tema')}}>
@@ -70,8 +72,8 @@ const DetailKomik = () => {
                           localStorage.setItem('KomikurlAPI', item.detail_url);
                           localStorage.setItem('paramKomik', item.param);
                         }}>
-                            <h3 className='font-bold'>{item.chapter}</h3>
-                            <p>{item.release}</p>
+                            <h3 className='font-bold dark:text-slate-300'>{item.chapter}</h3>
+                            <p className=' dark:text-slate-300'>{item.release}</p>
                         </button>
                         ))}
                     </div>

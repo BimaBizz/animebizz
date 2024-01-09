@@ -96,7 +96,7 @@ const login = () => {
         </div>
         <div className='flex items-center justify-center p-3 mt-5 w-full'>
             <button className='px-4 py-2 flex items-center rounded-full bg-red-600 text-white justify-center' style={{backgroundColor: localStorage.getItem('Tema')}} onClick={loginGoole}>
-            <FaGoogle className='mr-2'/> Login Google
+            <FaGoogle className='mr-2'/> Login Dengan Google
             </button>
         </div>
     </div>

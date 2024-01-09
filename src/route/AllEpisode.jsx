@@ -30,7 +30,9 @@ const AllEpisode = () => {
   return (
     <div>
       {loading ? (
-        <p>Loading...</p>
+        <div className='w-full h-full flex justify-center items-center'>
+        <div className='loader'></div>
+      </div>
       ) : allEpisodeData.length > 0 ? (
         <div className='m-4 space-y-4'>
           {allEpisodeData.map((season, seasonIndex) => (
@@ -40,7 +42,7 @@ const AllEpisode = () => {
               >{season.seasonTitle}</h2>
               <div className='grid gap-2 md:grid-cols-3 lg:grid-cols-5'>
               {season.episodeLinks.map((episode, episodeIndex) => (
-                  <button key={episodeIndex} className='border-red-600 shadow border rounded-md p-2 hover:shadow-red-600 hover:shadow-md' 
+                  <button key={episodeIndex} className='border-red-600 shadow border rounded-md p-2 hover:shadow-red-600 hover:shadow-md dark:text-slate-300' 
                   style={{borderColor : localStorage.getItem('Tema'), boxShadow: `0 5px 10px ${localStorage.getItem('Tema')}`}}
                   onClick={() => handleClick(localStorage.setItem("urlAPI", episode.modifiedEpisodeUrl))}>{episode.episodeTitle}</button>
                   ))}

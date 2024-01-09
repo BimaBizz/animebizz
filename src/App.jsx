@@ -15,7 +15,6 @@ export default function App() {
 
   const handleClick = () => {
     setOpen(!open);
-    console.log(!open);
   };
 
   const handleSubmit = (e) => {
@@ -30,7 +29,6 @@ export default function App() {
         const response = await fetch(`https://animev1.bimabizz.my.id/api/anime?s=${search}`);
         const result = await response.json();
         setData(result.data);
-        console.log(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -47,11 +45,11 @@ export default function App() {
   // Conditionally render the search button only on the home page ('/')
   const isHomePage = location.pathname === '/';
   const renderSearchButton = isHomePage && (
-    <div className='sticky bottom-4 w-full'>
+    <div className='sticky z-50 bottom-4 w-full'>
       <div className='w-full flex justify-end px-4'>
         <button
           type="button"
-          className='flex items-center justify-center p-4 bg-red-600 text-white h-16 w-16 rounded-full text-2xl border-2 border-white hover:bg-white hover:text-red-600 transition-colors duration-500 hover:shadow-md hover:shadow-red-600'
+          className='flex items-center justify-center p-4 bg-red-600 text-white h-16 w-16 rounded-full text-2xl border-2 border-white hover:shadow-md hover:shadow-red-600'
           onClick={handleClick}
           style={{backgroundColor: localStorage.getItem('Tema'), color: '#fff', boxShadow: `0 5px 10px ${localStorage.getItem('Tema')}`}}
         >
@@ -63,7 +61,7 @@ export default function App() {
 
   return (
     <div className="relative">
-      <div className='sticky top-0 w-full'>
+      <div className='sticky z-50 top-0 w-full'>
         {!open ? (
           <div className='absolute z-50 w-full h-screen p-4 bg-black/50 backdrop-blur-sm flex items-center justify-center'>
             <div className="w-full max-w-5xl bg-white/30 p-4 rounded-lg">
@@ -112,8 +110,8 @@ export default function App() {
       <div className="h-full min-h-screen p-4">
         <Outlet />
       </div>
-      <Footer />
       {renderSearchButton}
+      <Footer />
     </div>
   );
 }

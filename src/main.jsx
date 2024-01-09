@@ -22,6 +22,7 @@ import KomikSaya from './dashboard_route/KomikSaya.jsx';
 import HomeDashboard from './dashboard_route/HomeDashboard.jsx';
 import TemaSaya from './dashboard_route/TemaSaya.jsx';
 import ListAnime from './route/ListAnime.jsx'
+import ChatAdmin from './dashboard_route/ChatAdmin.jsx';
 import { Navigate } from 'react-router-dom';
 
 const userTokenExists = localStorage.getItem('user') && localStorage.getItem('token');
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
       {
         path: "tema-saya",
         element: <TemaSaya />
+      },
+      {
+        path: 'chat-diskusi',
+        element: <ChatAdmin />
       }
     ]
   },
@@ -103,7 +108,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='font-poppins flex justify-center'>
+    <div className='font-poppins flex justify-center dark:bg-slate-800'>
       <div className='w-full max-w-[1366px]'>
         <RouterProvider router={router} />
       </div>

@@ -45,8 +45,11 @@ const AllEpisode = () => {
 
   return (
     <div>
+      
       {loading ? (
-        <p>Loading...</p>
+        <div className='w-full h-full flex justify-center items-center'>
+        <div className='loader'></div>
+      </div>
       ) : (
         <>
           <div className='gap-4'>
@@ -72,7 +75,7 @@ const AllEpisode = () => {
                         style={{ boxShadow: `0 5px 10px ${localStorage.getItem('Tema')}`, borderColor: localStorage.getItem('Tema') }}
                         onClick={() => handleClick(item.url)}
                       >
-                        <h2 className='text-center w-full'>{item.title}</h2>
+                        <h2 className='text-center w-full dark:text-slate-300'>{item.title}</h2>
                       </div>
                     ))}
                   </div>

@@ -53,8 +53,8 @@ const AnimeSaya = () => {
                 className='object-cover w-full h-full group-hover:scale-110 transition-transform duration-500'
               />
             </div>
-            <h1 className='font-bold'>{anime.title}</h1>
-            <h2 className='text-sm'>{anime.upload_time}</h2>
+            <h1 className='font-bold dark:text-slate-300'>{anime.title}</h1>
+            <h2 className='text-sm dark:text-slate-300'>{anime.upload_time}</h2>
             <button
               className='text-white bg-red-600 p-2 rounded-md'
               style={{ backgroundColor: localStorage.getItem('Tema') }}

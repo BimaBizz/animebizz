@@ -42,14 +42,18 @@ function Jadwal() {
               <meta name="robots" content="INDEX" />
               <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
               <meta content="animebizz" name="author" />
-              <link rel="canonical" href="https://anime.bimabizz.my.id/jadwal" />
-              <link rel="Jadwal" href="https://anime.bimabizz.my.id" />
+              <link rel="canonical" href="https://anime.bimabizz.my.id" />
+              <link rel="Jadwal" href="https://anime.bimabizz.my.id/jadwal" />
+              <link rel="Komik" href="https://anime.bimabizz.my.id/komik" />
+              <link rel="Komik" href="https://anime.bimabizz.my.id/list-anime" />
           </Helmet>
     </div>
       <div className='gap-4'>
         <h1 className='text-xl font-bold text-red-600 mb-4' style={{color : localStorage.getItem('Tema')}}>Jadwal Anime Terbaru</h1>
         {loading ? (
-          <p>Loading...</p>
+          <div className='w-full h-full flex justify-center items-center'>
+          <div className='loader'></div>
+        </div>
         ) : (
           <div className='space-y-3'>
             {dataAnime.map((anime, index) => (
@@ -60,8 +64,8 @@ function Jadwal() {
                         <button key={index} className='border border-red-600 p-2 rounded-md shadow-md space-y-2 hover:cursor-pointer  hover:shadow-md group'
                          style={{boxShadow: `0 5px 10px ${localStorage.getItem('Tema')}`, borderColor: localStorage.getItem('Tema')}}
                          onClick={() => handleClick(localStorage.setItem("urlAPI", list.url))}>
-                            <h3 className='text-putih'>{list.title}</h3>
-                            <p className='text-sm text-putih'>{list.time}</p>
+                            <h3 className='dark:text-slate-300'>{list.title}</h3>
+                            <p className='text-sm dark:text-slate-300'>{list.time}</p>
                         </button>
                     ))}
                 </div>

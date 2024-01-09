@@ -98,7 +98,7 @@ const Komik = () => {
           </Helmet>
       </>
     </div>
-    <div className="p-4 bg-bg rounded-md">
+    <div className="rounded-md">
       <div className="flex justify-between items-center mb-5">
         <h1 className="text-xl font-bold text-red-600"
         style={{color: localStorage.getItem('Tema')}}
@@ -108,7 +108,9 @@ const Komik = () => {
         </button>
       </div>
       {loading ? (
-        <p>Loading...</p>
+        <div className='w-full h-full flex justify-center items-center'>
+        <div className='loader'></div>
+      </div>
       ) : (
         <div className={`${open ? '' : 'hidden'}`}>
           <div className=' grid md:grid-cols-3 lg:grid-cols-4 gap-3'>
@@ -122,8 +124,8 @@ const Komik = () => {
                   </div>
                   <img src={anime.thumbnail} alt={anime.title} className='object-cover w-full h-full group-hover:scale-110 transition-transform duration-500'/>
                 </div>
-                <h1 className='font-bold'>{anime.title}</h1>
-                <p className='text-sm'>{anime.description}</p>
+                <h1 className='font-bold dark:text-slate-300'>{anime.title}</h1>
+                <p className='text-sm dark:text-slate-300'>{anime.description}</p>
                 <div className='flex flex-col place-content-end gap-2'>
                   <button className='bg-red-600 text-white px-3 py-1 rounded  flex justify-center items-center' 
                   style={{backgroundColor: localStorage.getItem('Tema')}}

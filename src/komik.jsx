@@ -51,7 +51,7 @@ const komik = () => {
       <div className='w-full flex justify-end px-4'>
         <button
           type="button"
-          className='flex items-center justify-center p-4 bg-red-600 text-white h-16 w-16 rounded-full text-2xl border-2 border-white hover:bg-white hover:text-red-600 transition-colors duration-500 hover:shadow-md hover:shadow-red-600'
+          className='flex items-center justify-center p-4 bg-red-600 text-white h-16 w-16 rounded-full text-2xl border-2 border-white hover:shadow-md hover:shadow-red-600'
           style={{backgroundColor: localStorage.getItem('Tema'), color: '#fff', boxShadow: `0 5px 10px ${localStorage.getItem('Tema')}`}}
           onClick={handleClick}
         >
@@ -114,8 +114,8 @@ const komik = () => {
       <div className="h-full min-h-screen p-4">
         <Outlet />
       </div>
-      <Footer />
       {renderSearchButton}
+      <Footer />
     </div>
   )
 }

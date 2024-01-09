@@ -48,9 +48,6 @@ const Anime = () => {
     fetchData();
   }, [currentPage]);
 
-  const handleClickAnime = () => {
-    setOpen(!open);
-  };
 
   const handleNextPage = () => {
     if (currentPage < allDataAnime.max_page) {
@@ -80,6 +77,12 @@ const Anime = () => {
       <Helmet>
           <title>ANIMEBIZZ.</title>
           <meta name="description" content="ANIMEBIZZ Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit" />
+          <meta name="robots" content="INDEX" />
+              <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+              <meta content="animebizz" name="author" />
+              <link rel="canonical" href="https://anime.bimabizz.my.id" />
+              <link rel="Jadwal" href="https://anime.bimabizz.my.id/jadwal" />
+              <link rel="Komik" href="https://anime.bimabizz.my.id/komik" />
       </Helmet>
   
       <>
@@ -91,18 +94,19 @@ const Anime = () => {
               <meta content="animebizz" name="author" />
               <link rel="canonical" href="https://anime.bimabizz.my.id" />
               <link rel="Jadwal" href="https://anime.bimabizz.my.id/jadwal" />
+              <link rel="Komik" href="https://anime.bimabizz.my.id/komik" />
+              <link rel="Komik" href="https://anime.bimabizz.my.id/list-anime" />
           </Helmet>
       </>
     </div>
-    <div className="p-4 rounded-md">
+    <div className="rounded-md">
       <div className="flex justify-between items-center mb-5">
-        <h1 className="text-xl font-bold text-putih text-red-600" style={{color : localStorage.getItem('Tema')}}>Anime Terbaru</h1>
-        <button onClick={handleClickAnime} className='w-auto h-auto md:hidden block text-putih' aria-label='mini_mize'>
-          <HiOutlineDotsVertical />
-        </button>
+        <h1 className="text-xl font-bold text-red-600" style={{color : localStorage.getItem('Tema')}}>Anime Terbaru</h1>
       </div>
       {loading ? (
-        <p>Loading...</p>
+        <div className='w-full h-full flex justify-center items-center'>
+          <div className='loader'></div>
+        </div>
       ) : (
         <div className={`${open ? '' : 'hidden'}`}>
           <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'>
@@ -112,8 +116,8 @@ const Anime = () => {
                 <div className='w-full h-56 overflow-hidden rounded-md shadow-lg'>
                   <img src={anime.thumbnail} alt={anime.title} className='object-cover w-full h-full group-hover:scale-110 transition-transform duration-500'/>
                 </div>
-                <h1 className='font-bold text-putih'>{anime.title}</h1>
-                <h2 className='text-sm text-putih'>{anime.upload_time}</h2>
+                <h1 className='font-bold dark:text-slate-300'>{anime.title}</h1>
+                <h2 className='text-sm dark:text-slate-300'>{anime.upload_time}</h2>
                 <div className='flex flex-col place-content-end gap-2'>
                   <button className='bg-red-600 text-white px-3 py-1 rounded w-full flex justify-center items-center' onClick={() => navigate(`/anime/${anime.param}`)(localStorage.setItem('urlAPI', anime.detail_url), localStorage.setItem('param', anime.param))}
                   style={{backgroundColor: localStorage.getItem('Tema')}}

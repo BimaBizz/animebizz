@@ -38,9 +38,11 @@ const Navbaar = () => {
     <>
       <nav className='sticky top-0 z-40 py-4 px-6 bg-red-600 shadow-md flex justify-between items-center text-white' style={{backgroundColor: localStorage.getItem('Tema')}}>
         <div className='md:flex items-center'>
-          <h1 className='text-3xl font-bold'>
-            ANIME<span className=''>BIZZ.</span>
-          </h1>
+          <Link to={'/'}>
+            <h1 className='text-3xl font-bold'>
+              ANIME<span className=''>BIZZ.</span>
+            </h1>
+          </Link>
           <input type='text' className='hidden ml-6 px-4 py-1 rounded-full' placeholder='search ...' />
         </div>
         <div className='flex gap-2 md:gap-4'>
@@ -89,6 +91,7 @@ const Navbaar = () => {
                         localStorage.removeItem('user');
                         localStorage.removeItem('token');
                         localStorage.removeItem('Tema');
+                        localStorage.removeItem('DarkMode');
                         window.location.reload();
                     }}
                     ><span className='mr-2'><HiOutlineLogout /></span> LogOut</button>
@@ -108,7 +111,7 @@ const Navbaar = () => {
           )}
         </div>
       </nav>
-      <div className={`sticky top-[68px] z-40 flex justify-between items-center text-red-600 bg-white ${open ? 'block' : 'hidden'}`} style={{color: localStorage.getItem('Tema')}}>
+      <div className={`sticky top-[68px] z-40 flex justify-between items-center text-slate-800 dark:text-slate-300 bg-white dark:bg-slate-800 ${open ? 'block' : 'hidden'}`}>
         <ul className='w-full'>
           <hr />
           <Link to='/' onClick={handleClick}>

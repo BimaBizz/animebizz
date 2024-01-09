@@ -33,15 +33,17 @@ const DetailsAnime = () => {
   return (
     <>
     {loading ? (
-    <p>Loading...</p>
+    <div className='w-full h-full flex justify-center items-center'>
+    <div className='loader'></div>
+  </div>
     ) : (
     <>
-    <h1 className='m-4 text-xl font-bold'>{Anime.name}</h1>
+    <h1 className='m-4 text-xl font-bold dark:text-slate-300'>{Anime.name}</h1>
     <div className='m-4 grid md:flex gap-4'>
       <iframe className='w-full md:w-1/2 aspect-video' src={server} allowFullScreen />
       <div className='md:w-1/2 w-full my-3 space-y-3'>
         <h1 className='bg-black w-full rounded-md p-3 text-white font-bold'>Jika Server error silakan gunakan server yang tersedia</h1>
-        <h2 className='font-bold'>Bloger</h2>
+        <h2 className='font-bold dark:text-slate-300'>Bloger</h2>
         <div className='grid grid-cols-2 gap-2'>
           {Anime.video_embed_links.map((resolution, index) => (
             <button key={index} className='text-white bg-red-600 py-2 px-4 rounded-md'
@@ -51,7 +53,7 @@ const DetailsAnime = () => {
             </button>
           ))}
         </div>
-        <h2 className='font-bold'>Mirror</h2>
+        <h2 className='font-bold dark:text-slate-300'>Mirror</h2>
         <div className='grid grid-cols-2 gap-2'>
           {Anime.video_mirrors.map((mirror, index) => (
             <button key={index} className='text-white bg-red-600 py-2 px-4 rounded-md' 
@@ -64,7 +66,7 @@ const DetailsAnime = () => {
       </div>
     </div>
     <div className='m-4'>
-        <h2 className='text-xl font-bold'>Episode Lainnya</h2>
+        <h2 className='text-xl font-bold dark:text-slate-300'>Episode Lainnya</h2>
         <div className='flex gap-2 mt-2'>
         {Anime.episode_navigation.map((episode, index) => (
         <div key={index}>
@@ -76,12 +78,12 @@ const DetailsAnime = () => {
         </div>
     </div>
     <div className='m-4 block md:flex gap-4'>
-        <div className='h-80 md:w-1/2 rounded-md overflow-hidden'>
+        <div className='h-80 md:w-1/2 rounded-md overflow-hidden mb-4 md:mb-0'>
             <img src={Anime.thumbnail} alt={Anime.name} className='w-full h-full object-cover object-center'/>
         </div>
         <div className='w-full md:w-1/2 space-y-4'>
-            <h1 className='text-2xl font-bold'>Synopsis : </h1>
-            <p className=''>{Anime.synopsis}</p>
+            <h1 className='text-2xl font-bold dark:text-slate-300'>Synopsis : </h1>
+            <p className='dark:text-slate-300'>{Anime.synopsis}</p>
         </div>
     </div>
     </>

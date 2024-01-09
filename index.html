@@ -1,10 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/gif" sizes="16x16" rel="noopener" target="_blank" href="./public/favicon-16x16.gif">
+    <link rel="icon" type="image/gif" sizes="32x32" rel="noopener" target="_blank" href="./public/favicon-32x32.gif">
+    <link rel="icon" type="image/gif" sizes="48x48" rel="noopener" target="_blank" href="./public/favicon-48x48.gif">
+    <link rel="apple-touch-icon" sizes="180x180" rel="noopener" target="_blank" href="./public/apple-touch-icon.gif">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ANIMEBIZZ.</title>
+    <title>ANIMEBIZZ</title>
+    <script>
+      const darkModeValue = localStorage.getItem('DarkMode');
+      const htmlElement = document.querySelector('html');
+      if (darkModeValue === 'dark') {
+        htmlElement.classList.add('dark');
+      } else {
+        htmlElement.classList.remove('dark');
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
