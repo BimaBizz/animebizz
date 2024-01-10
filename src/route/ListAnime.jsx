@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HiMinusCircle, HiPlusCircle } from "react-icons/hi";
+import { Helmet } from 'react-helmet';
+import Chiby from '../../public/apple-touch-icon.gif'
 
 const AllEpisode = () => {
   const [loading, setLoading] = useState(true);
@@ -45,7 +47,23 @@ const AllEpisode = () => {
 
   return (
     <div>
-      
+      <Helmet>
+              <title>ANIMEBIZZ | HOME</title>
+              <link rel="canonical" href="https://anime.bimabizz.my.id"/>
+              <meta name="description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta name="keywords" content="anime, streaming, komik, subtitle Indonesia"/>
+              <meta name="robots" content="INDEX, FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1"/>
+              <meta name="author" content="animebizz"/>
+              <meta property="og:title" content="ANIMEBIZZ | HOME"/>
+              <meta property="og:type" content="website"/>
+              <meta property="og:url" content="https://anime.bimabizz.my.id"/>
+              <meta property="og:image" content={Chiby}/>
+              <meta property="og:description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta name="twitter:card" content="summary_large_image"/>
+              <meta name="twitter:title" content="ANIMEBIZZ | HOME"/>
+              <meta name="twitter:description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta name="twitter:image" content={Chiby}/>
+          </Helmet>
       {loading ? (
         <div className='w-full h-full flex justify-center items-center'>
         <div className='loader'></div>

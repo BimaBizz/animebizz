@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HiOutlineDotsVertical, HiOutlineBookOpen, HiChevronLeft, HiChevronRight, HiPlusCircle } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Chiby from '../../public/apple-touch-icon.gif'
 
 const Komik = () => {
   const navigate = useNavigate();
@@ -81,22 +82,23 @@ const Komik = () => {
   return (
     <>
     <div>
-      <Helmet>
-          <title>ANIMEBIZZ.</title>
-          <meta name="description" content="ANIMEBIZZ Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit" />
-      </Helmet>
-  
-      <>
           <Helmet>
           <title>ANIMEBIZZ | KOMIK</title>
-          <meta name="description" content="ANIMEBIZZ Baca Komik Online dan Nonton Streaming Anime Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit" />
-          <meta name="robots" content="INDEX" />
-          <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-          <meta content="komikbizz" name="author" />
-          <link rel="canonical" href="https://anime.bimabizz.my.id" />
-          <link rel="Jadwal" href="https://anime.bimabizz.my.id/jadwal" />
+          <link rel="canonical" href="https://anime.bimabizz.my.id"/>
+              <meta name="description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta name="keywords" content="anime, streaming, komik, subtitle Indonesia"/>
+              <meta name="robots" content="INDEX, FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1"/>
+              <meta name="author" content="animebizz"/>
+              <meta property="og:title" content="ANIMEBIZZ | HOME"/>
+              <meta property="og:type" content="website"/>
+              <meta property="og:url" content="https://anime.bimabizz.my.id"/>
+              <meta property="og:image" content={Chiby}/>
+              <meta property="og:description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta name="twitter:card" content="summary_large_image"/>
+              <meta name="twitter:title" content="ANIMEBIZZ | HOME"/>
+              <meta name="twitter:description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta name="twitter:image" content={Chiby}/>
           </Helmet>
-      </>
     </div>
     <div className="rounded-md">
       <div className="flex justify-between items-center mb-5">
