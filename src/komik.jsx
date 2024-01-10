@@ -27,7 +27,7 @@ const komik = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`https://animev1.bimabizz.my.id/api/komiku?s=${search}`);
+        const response = await fetch(`/api/komiku?s=${search}`);
         const result = await response.json();
         setData(result.data);
         console.log(data);

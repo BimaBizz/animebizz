@@ -20,7 +20,7 @@ const Footer = () => {
               <Link to="/komik" className="mr-4 hover:underline md:mr-6 ">Komik</Link>
           </li>
       </ul>
-      <span className="text-sm text-gray-500 sm:text-center dark:text-slate-300">© 2021-2022 <Link to="/" className="hover:underline">ANIMEBIZZ.™</Link>. All Rights Reserved.</span>
+      <span className="text-sm text-gray-500 sm:text-center dark:text-slate-300">© 2021-2022 <Link to="/" className="hover:underline">DILARANG ASAL COMOT.™</Link>. All Rights Reserved.</span>
   </div>
 </footer>
   )

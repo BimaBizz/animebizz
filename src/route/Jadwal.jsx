@@ -11,7 +11,7 @@ function Jadwal() {
   useEffect(() => {
     const fetchData = async () => {
         try {
-          const response = await fetch('https://animev1.bimabizz.my.id/api/anime/jadwal/terbaru');
+          const response = await fetch('/api/anime/jadwal/terbaru');
           const data = await response.json();
           setDataAnime(data);
           setLoading(false);
@@ -34,20 +34,20 @@ function Jadwal() {
     <>
       <div>
           <Helmet>
-              <title>ANIMEBIZZ | JADWAL</title>
+              <title>DILARANG ASAL COMOT | JADWAL</title>
               <link rel="canonical" href="https://anime.bimabizz.my.id"/>
-              <meta name="description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta name="description" content="DILARANG ASAL COMOT - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
               <meta name="keywords" content="anime, streaming, komik, subtitle Indonesia"/>
               <meta name="robots" content="INDEX, FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1"/>
-              <meta name="author" content="animebizz"/>
-              <meta property="og:title" content="ANIMEBIZZ | HOME"/>
+              <meta name="author" content="DILARANG ASAL COMOT"/>
+              <meta property="og:title" content="DILARANG ASAL COMOT | HOME"/>
               <meta property="og:type" content="website"/>
               <meta property="og:url" content="https://anime.bimabizz.my.id"/>
               <meta property="og:image" content={Chiby}/>
-              <meta property="og:description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta property="og:description" content="DILARANG ASAL COMOT - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
               <meta name="twitter:card" content="summary_large_image"/>
-              <meta name="twitter:title" content="ANIMEBIZZ | HOME"/>
-              <meta name="twitter:description" content="ANIMEBIZZ - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
+              <meta name="twitter:title" content="DILARANG ASAL COMOT | HOME"/>
+              <meta name="twitter:description" content="DILARANG ASAL COMOT - Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit"/>
               <meta name="twitter:image" content={Chiby}/>
           </Helmet>
     </div>

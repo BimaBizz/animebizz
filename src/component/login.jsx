@@ -54,18 +54,18 @@ const login = () => {
   return (
     <>
     <Helmet>
-              <title>ANIMEBIZZ | LOGIN</title>
-              <meta name="description" content="Login ke animebizz untuk mendapatkan fitur menarik" />
+              <title>DILARANG ASAL COMOT | LOGIN</title>
+              <meta name="description" content="Login ke DILARANG ASAL COMOT untuk mendapatkan fitur menarik" />
               <meta name="robots" content="INDEX" />
               <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-              <meta content="animebizz" name="author" />
+              <meta content="DILARANG ASAL COMOT" name="author" />
               <link rel="canonical" href="https://anime.bimabizz.my.id" />
     </Helmet>
     <div className='flex flex-col justify-center place-items-center w-full min-h-screen bg-cover bg-center bg-no-repeat p-4' style={{backgroundImage: `url(${BgWallpaper})`}}>
         <div className='p-3 bg-white/50 backdrop-blur-sm rounded-md'>
             <form onSubmit={handleSubmit} className='flex flex-col items-center justify-items-center max-w-xl'>
-                <h1 className='text-2xl font-bold uppercase'>Login to ANIMEBIZZ</h1>
-                <p className='text-sm text-center'>ANIMEBIZZ Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit</p>
+                <h1 className='text-2xl font-bold uppercase'>Login to DILARANG ASAL COMOT</h1>
+                <p className='text-sm text-center'>DILARANG ASAL COMOT Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit</p>
                 <div className='my-5 space-y-2 flex justify-items-center flex-col items-center w-full'>
                     <input type="email" 
                     placeholder='email' 

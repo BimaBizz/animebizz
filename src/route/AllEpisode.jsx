@@ -8,7 +8,7 @@ const AllEpisode = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://animev1.bimabizz.my.id/api/anime/jadwal/allepisode/${param}`)
+    fetch(`/api/anime/jadwal/allepisode/${param}`)
       .then((res) => res.json())
       .then((data) => {
         setAllEpisodeData(data.seasons);
@@ -22,7 +22,7 @@ const AllEpisode = () => {
 
   const handleClick = () => {
     const param = localStorage.getItem('urlAPI')
-    const resultParam = param.replace("https://animev1.bimabizz.my.id/api/anime/", "");
+    const resultParam = param.replace("/api/anime/", "");
     localStorage.setItem('param', resultParam)
     navigate(`/anime/${resultParam}`)
   }

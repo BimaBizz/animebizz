@@ -6,7 +6,7 @@ const DetailsAnime = () => {
     const url = localStorage.getItem('param')
     const [Anime, setAnime] = useState({})
     const [loading, setLoading] = useState(true)
-    const [baseUrl, setBaseUrl] = useState(`https://animev1.bimabizz.my.id/api/anime/${url}`)
+    const [baseUrl, setBaseUrl] = useState(`/api/anime/${url}`)
     const [server, setServer] = useState('')
 
     useEffect(() => {

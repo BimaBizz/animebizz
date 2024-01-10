@@ -26,7 +26,7 @@ export default function App() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`https://animev1.bimabizz.my.id/api/anime?s=${search}`);
+        const response = await fetch(`/api/anime?s=${search}`);
         const result = await response.json();
         setData(result.data);
       } catch (error) {

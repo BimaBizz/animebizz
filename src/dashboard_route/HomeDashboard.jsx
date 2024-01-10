@@ -12,11 +12,11 @@ const HomeDashboard = () => {
   return (
     <>
     <Helmet>
-          <title>ANIMEBIZZ.</title>
-          <meta name="description" content="ANIMEBIZZ Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit" />
+          <title>DILARANG ASAL COMOT.</title>
+          <meta name="description" content="DILARANG ASAL COMOT Nonton Online Streaming Anime dan Baca Komik Subtitle Indonesia Kualitas Tinggi tersedia 240P 360P 480P 720P MP4 size irit" />
           <meta name="robots" content="INDEX" />
               <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-              <meta content="animebizz" name="author" />
+              <meta content="DILARANG ASAL COMOT" name="author" />
               <link rel="canonical" href="https://anime.bimabizz.my.id" />
               <link rel="Jadwal" href="https://anime.bimabizz.my.id/jadwal" />
               <link rel="Komik" href="https://anime.bimabizz.my.id/komik" />
@@ -25,11 +25,11 @@ const HomeDashboard = () => {
   
       <>
           <Helmet>
-              <title>ANIMEBIZZ | DASHBOARD</title>
-              <meta name="description" content="ANIMEBIZZ dashboard user for management their anime, theme and chat" />
+              <title>DILARANG ASAL COMOT | DASHBOARD</title>
+              <meta name="description" content="DILARANG ASAL COMOT dashboard user for management their anime, theme and chat" />
               <meta name="robots" content="INDEX" />
               <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-              <meta content="animebizz" name="author" />
+              <meta content="DILARANG ASAL COMOT" name="author" />
               <link rel="canonical" href="https://anime.bimabizz.my.id" />
               <link rel="Jadwal" href="https://anime.bimabizz.my.id/jadwal" />
               <link rel="Komik" href="https://anime.bimabizz.my.id/komik" />
